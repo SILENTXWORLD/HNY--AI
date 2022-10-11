@@ -85,8 +85,7 @@ async def chatbot(client, message):
 
 @bot.on_message(
  (
-        filters.text
-        | filters.sticker
+        filters.sticker
     )
     & ~filters.private
     & ~filters.bot,
@@ -152,7 +151,6 @@ async def vickai(client: Client, message: Message):
 @bot.on_message(
  (
         filters.sticker
-        | filters.text
     )
     & ~filters.private
     & ~filters.bot,
@@ -218,8 +216,7 @@ async def vickstickerai(client: Client, message: Message):
 
 @bot.on_message(
     (
-        filters.text
-        | filters.sticker
+        filters.sticker
     )
     & filters.private
     & ~filters.bot,
@@ -262,7 +259,6 @@ async def vickprivate(client: Client, message: Message):
 @bot.on_message(
  (
         filters.sticker
-        | filters.text
     )
     & filters.private
     & ~filters.bot,
