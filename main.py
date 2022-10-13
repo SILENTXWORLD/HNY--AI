@@ -27,7 +27,7 @@ async def is_admins(chat_id: int):
 
 @bot.on_message(filters.command("start"))
 async def start(client, message):
-        await message.reply_text("Hi! My name is Misti. I'm an Artificial Intelligence")
+        await message.reply_text("Hi! My name is Ishi. I'm an Artificial Intelligence\n /chatbot - [on|off]")
 
 
 @bot.on_message(
@@ -85,7 +85,8 @@ async def chatbot(client, message):
 
 @bot.on_message(
  (
-        filters.sticker
+        filters.text
+        | filters.sticker
     )
     & ~filters.private
     & ~filters.bot,
@@ -151,6 +152,7 @@ async def vickai(client: Client, message: Message):
 @bot.on_message(
  (
         filters.sticker
+        | filters.text
     )
     & ~filters.private
     & ~filters.bot,
@@ -216,7 +218,8 @@ async def vickstickerai(client: Client, message: Message):
 
 @bot.on_message(
     (
-        filters.sticker
+        filters.text
+        | filters.sticker
     )
     & filters.private
     & ~filters.bot,
@@ -259,6 +262,7 @@ async def vickprivate(client: Client, message: Message):
 @bot.on_message(
  (
         filters.sticker
+        | filters.text
     )
     & filters.private
     & ~filters.bot,
