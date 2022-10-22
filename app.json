@@ -5,7 +5,7 @@
             "description": "Pyrogram String session of your account",
             "required": true
         },        
-        "STKR_DB": {
+        "MONGO_URL": {
             "description": "mongo db url here",
             "required": true
         },
