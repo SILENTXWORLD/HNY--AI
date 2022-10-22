@@ -33,7 +33,7 @@ async def start(client, message):
 @bot.on_message(
     filters.command("chatbot off", prefixes=["/", ".", "?", "-"])
     & ~filters.private)
-async def chatbotofd(client, message):
+async def stickerzofd(client, message):
     vickdb = MongoClient(MONGO_URL)    
     vick = vickdb["VickDb"]["Vick"]     
     if message.from_user:
@@ -56,7 +56,7 @@ async def chatbotofd(client, message):
 @bot.on_message(
     filters.command("chatbot on", prefixes=["/", ".", "?", "-"])
     & ~filters.private)
-async def chatboton(client, message):
+async def stickerzon(client, message):
     vickdb = MongoClient(MONGO_URL)    
     vick = vickdb["VickDb"]["Vick"]     
     if message.from_user:
